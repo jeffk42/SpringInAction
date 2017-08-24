@@ -18,6 +18,9 @@ public class Main {
 			
 			Squishee s = km.buySquishee(c);
 			
+			// Try to buy a second one.
+			s = km.buySquishee(c);
+			
 		} catch (KwikEMartException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
