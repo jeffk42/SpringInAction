@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="kwikEMartTarget" class="com.springinaction.chapter03.store.ApuKwikEMart">
+		<property name="squisheeMachineEmpty">
+			<value>false</value>
+		</property>
+	</bean>
+	
+	<bean id="welcomeAdvice" class="com.springinaction.chapter03.store.WelcomeAdvice" />
+	
+	<bean id="kwikEMart" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<value>com.springinaction.chapter03.store.KwikEMart</value>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>welcomeAdvice</value>
+			</list>
+		</property>
+		<property name="target">
+			<ref bean="kwikEMartTarget" />
+		</property>
+	</bean>
+</beans>
