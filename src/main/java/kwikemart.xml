@@ -9,6 +9,7 @@
 	</bean>
 	
 	<bean id="welcomeAdvice" class="com.springinaction.chapter03.store.WelcomeAdvice" />
+	<bean id="thankYouAdvice" class="com.springinaction.chapter03.store.ThankYouAdvice" />
 	
 	<bean id="kwikEMart" class="org.springframework.aop.framework.ProxyFactoryBean">
 		<property name="proxyInterfaces">
@@ -17,6 +18,7 @@
 		<property name="interceptorNames">
 			<list>
 				<value>welcomeAdvice</value>
+				<value>thankYouAdvice</value>
 			</list>
 		</property>
 		<property name="target">

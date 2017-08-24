@@ -12,6 +12,9 @@ public class ApuKwikEMart implements KwikEMart {
 		if (squisheeMachineEmpty)
 			throw new NoMoreSquisheesException();
 		
+		
+		System.out.println("Here's your Squishee!");
+		
 		return new Squishee();
 	}
 

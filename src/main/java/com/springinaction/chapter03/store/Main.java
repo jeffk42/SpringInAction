@@ -18,11 +18,6 @@ public class Main {
 			
 			Squishee s = km.buySquishee(c);
 			
-			if (s != null)
-				System.out.println("Here's your Squishee!");
-			else
-				System.out.println("Ooops.");
-			
 		} catch (KwikEMartException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
